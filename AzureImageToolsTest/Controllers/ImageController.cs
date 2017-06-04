@@ -1,7 +1,6 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 using AzureImageToolsTest.Domain;
-using Serilog;
 
 namespace AzureImageToolsTest.Controllers
 {
@@ -10,12 +9,6 @@ namespace AzureImageToolsTest.Controllers
     public class ImageController : Controller
     {
         private readonly IFileStore _fileStore;
-
-        // Do this properly!
-        public ImageController() : this(new DiskFileStore(Log.Logger))
-        {
-            
-        }
 
         public ImageController(IFileStore fileStore)
         {
