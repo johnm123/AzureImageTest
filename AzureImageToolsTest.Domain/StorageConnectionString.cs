@@ -1,15 +1,15 @@
 namespace AzureImageToolsTest.Domain
 {
-    public struct DiskFileStoreRoot
+    public struct StorageConnectionString
     {
         private readonly string _value;
 
-        public DiskFileStoreRoot(string value) 
+        public StorageConnectionString(string value) 
         {
             this._value = value;
         }
 
-        public static implicit operator string(DiskFileStoreRoot diskFileStoreRoot)
+        public static implicit operator string(StorageConnectionString diskFileStoreRoot)
         {
             return diskFileStoreRoot._value;
         }

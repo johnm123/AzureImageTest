@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Configuration;
+using System.IO;
 using System.Web;
 using System.Web.Mvc;
 using AzureImageToolsTest.Domain;
@@ -21,12 +22,18 @@ namespace AzureImageToolsTest.Configuration
             var container = new UnityContainer();
 
             container.RegisterInstance(typeof(ILogger), GetLogger());
-            container.RegisterType<IFileStore, DiskFileStore>();
+            container.RegisterType<IFileStore, BlobFileStore>();
 
-            var filesPath  = $"{HttpRuntime.AppDomainAppPath}" +
-                             $"Files{Path.DirectorySeparatorChar}";
+            // For blob storage
+            container.RegisterInstance(
+                typeof(StorageConnectionString), 
+                new StorageConnectionString(ConfigurationManager.AppSettings["StorageConnectionString"]));
+            
+            // For disk storage.
+            // container.RegisterType<IStoreStreamCommand, DiskFileStore>();
+            // var filesPath  = $"{HttpRuntime.AppDomainAppPath}Files{Path.DirectorySeparatorChar}";
+            // container.RegisterInstance(typeof(DiskFileStoreRoot), new DiskFileStoreRoot(filesPath));
 
-            container.RegisterInstance(typeof(DiskFileStoreRoot), new DiskFileStoreRoot(filesPath));
             return container;
         }
 

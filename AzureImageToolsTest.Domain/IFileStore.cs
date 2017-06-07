@@ -1,9 +1,13 @@
-﻿using System.IO;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
 
 namespace AzureImageToolsTest.Domain
 {
     public interface IFileStore
     {
-        void StoreFileFromStream(string fileName, Stream stream);
+        void Store(string fileName, Stream stream);
+
+        IEnumerable<Uri> GetAllBlobPaths();
     }
 }

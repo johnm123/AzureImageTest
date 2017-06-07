@@ -1,6 +1,8 @@
-﻿using System.Web;
+﻿using System;
+using System.Web;
 using System.Web.Mvc;
 using AzureImageToolsTest.Domain;
+using AzureImageToolsTest.Models;
 
 namespace AzureImageToolsTest.Controllers
 {
@@ -19,7 +21,8 @@ namespace AzureImageToolsTest.Controllers
         [Route("")]
         public ActionResult Index()
         {
-            return View();
+            var uris = _fileStore.GetAllBlobPaths();
+            return View(new ImageViewModel(uris));
         }
 
         [HttpPost]
@@ -30,7 +33,7 @@ namespace AzureImageToolsTest.Controllers
             {
                 //var fileName = Path.GetFileName(inputFile.FileName);
                 //var path = Path.Combine(Server.MapPath("~/App_Data/uploads"), fileName);
-                _fileStore.StoreFileFromStream(inputFile.FileName, inputFile.InputStream);
+                _fileStore.Store(inputFile.FileName, inputFile.InputStream);
             }
 
             return RedirectToAction("Index");
