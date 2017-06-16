@@ -9,5 +9,7 @@ namespace AzureImageToolsTest.Domain
         void Store(string fileName, Stream stream);
 
         IEnumerable<Uri> GetAllBlobPaths();
+
+        void Delete(Uri uri);
     }
 }

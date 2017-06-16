@@ -1,27 +1,43 @@
 ﻿
-    @{
-        ViewBag.Title = "Azure Test";
-    }
+@{
+    ViewBag.Title = "Azure Test";
+}
 
-    <div class="jumbotron">
-        <h3>Azure Test</h3>
-    </div>
+<div class="jumbotron">
+    <h3>Azure Test</h3>
+</div>
 
-    <div class="row">
+<div class="row">
 
-    </div>
+</div>
 
-    <div class="body-content">
-        <form action="@Url.Action("Upload", "Image")" method="post" enctype="multipart/form-data">
-
-            <p>
-                <label for="inputFile">Upload your file here</label>
-                <input type="file" name="inputFile" id="inputFile" />
-                <input type="submit" value="Upload" />
-            </p>
-        </form>
-        @foreach(var uri in Model.UriStrings)
+<div class="body-content">
+    <form action="@Url.Action("Upload", "Image")" method="post" enctype="multipart/form-data">
+        <p align="center">
+            <input type="file" name="inputFile" id="inputFile" />
+            <input type="submit" value="Upload" />
+        </p>
+    </form>
+    <br />
+    <p align="center">
+        <input type="button" value="Previous" hidden="@Model.CurrentImageIsFirstImage" id="btnPreviousImage" onclick="location.href='@Url.Action("Index", "Image", new { imageNumber = Model.PreviousImageNumber })'" />
+        <input type="button" value="Next" hidden="@Model.CurrentImageIsLastImage" id="btnNextImage" onclick="location.href='@Url.Action("Index", "Image", new { imageNumber = Model.NextImageNumber })'" />
+    </p>
+    @if (Model.HasUris)
+    {
+        <p align="center">
+            <label id="imageLabel">@Model.CurrentImageFileName</label>
+            <img alt="No image." src="@Model.CurrentImageUri" />
+        </p>
+        using (Html.BeginForm("Delete", "Image", new { uri = Model.CurrentImageUri }, FormMethod.Post))
         {
-            <img alt="No image." src="@uri" />
+            <p align="center">
+                <input type="submit" value="Delete" />
+            </p>
         }
-    </div>
+    }
+    else
+    {
+        <p align="center">No more images.</p>
+    }
+</div>

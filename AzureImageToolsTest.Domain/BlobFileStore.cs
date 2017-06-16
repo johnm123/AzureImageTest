@@ -58,6 +58,17 @@ namespace AzureImageToolsTest.Domain
             return blobs.Select(blobItem => blobItem.Uri).ToArray();
         }
 
+        public void Delete(Uri uri)
+        {
+            var container = GetBlobContainerReference();
+
+            var fileName = Uri.UnescapeDataString(uri.Segments.Last());
+
+            var blockBlob = container.GetBlockBlobReference(fileName);
+
+            blockBlob.DeleteIfExists();
+        }
+
         private CloudBlockBlob GetBlockBlobReference(string fileName)
         {
             try
