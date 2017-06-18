@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Media.Imaging;
 
 namespace AzureImageToolsTest.Models
 {
@@ -18,7 +19,7 @@ namespace AzureImageToolsTest.Models
                 {
                     return null;
                 }
-
+               
                 return this.ImageUris.ElementAt(CurrentImageNumber);
             }
         }

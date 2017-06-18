@@ -51,6 +51,13 @@ namespace AzureImageToolsTest.Controllers
         }
 
         [HttpPost]
+        [Route("firstface")]
+        public ActionResult FirstFace(Uri uri)
+        {
+            return View(new FaceViewModel());
+        }
+
+        [HttpPost]
         [Route("delete")]
         public ActionResult Delete(Uri uri)
         {

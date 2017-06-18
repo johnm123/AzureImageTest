@@ -35,6 +35,12 @@
                 <input type="submit" value="Delete" />
             </p>
         }
+        using (Html.BeginForm("FirstFace", "Image", new { uri = Model.CurrentImageUri }, FormMethod.Post))
+        {
+            <p align="center">
+                <input type="submit" value="Get First Face" />
+            </p>
+        }
     }
     else
     {
