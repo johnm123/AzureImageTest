@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using AzureImageToolsTest.CognitiveServices;
 using AzureImageToolsTest.Storage;
 using AzureImageToolsTest.Models;
 
@@ -13,9 +14,12 @@ namespace AzureImageToolsTest.Controllers
     {
         private readonly IFileStore _fileStore;
 
-        public ImageController(IFileStore fileStore)
+        private readonly IFaceRecognition _faceRecognition;
+
+        public ImageController(IFileStore fileStore, IFaceRecognition faceRecognition)
         {
             this._fileStore = fileStore;
+            this._faceRecognition = faceRecognition;
         }
 
         [HttpGet]

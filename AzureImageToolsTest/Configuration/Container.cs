@@ -2,6 +2,7 @@
 using System.IO;
 using System.Web;
 using System.Web.Mvc;
+using AzureImageToolsTest.CognitiveServices;
 using AzureImageToolsTest.Storage;
 using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.Mvc;
@@ -23,16 +24,16 @@ namespace AzureImageToolsTest.Configuration
 
             container.RegisterInstance(typeof(ILogger), GetLogger());
             container.RegisterType<IFileStore, BlobFileStore>();
+            container.RegisterType<IFaceRecognition, FaceRecognition>();
 
             // For blob storage
             container.RegisterInstance(
                 typeof(StorageConnectionString), 
                 new StorageConnectionString(ConfigurationManager.AppSettings["StorageConnectionString"]));
-            
-            // For disk storage.
-            // container.RegisterType<IStoreStreamCommand, DiskFileStore>();
-            // var filesPath  = $"{HttpRuntime.AppDomainAppPath}Files{Path.DirectorySeparatorChar}";
-            // container.RegisterInstance(typeof(DiskFileStoreRoot), new DiskFileStoreRoot(filesPath));
+
+            container.RegisterInstance(
+                typeof(FaceApiKey),
+                new FaceApiKey(ConfigurationManager.AppSettings["FaceApiKey"]));
 
             return container;
         }

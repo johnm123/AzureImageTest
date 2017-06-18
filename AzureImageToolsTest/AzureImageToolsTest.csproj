@@ -220,6 +220,10 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AzureImageToolsTest.CognitiveServices\AzureImageToolsTest.CognitiveServices.csproj">
+      <Project>{CA8EAD09-6CE1-4F4A-8484-8BE1D6D1B0FB}</Project>
+      <Name>AzureImageToolsTest.CognitiveServices</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AzureImageToolsTest.Storage\AzureImageToolsTest.Storage.csproj">
       <Project>{43a80c6f-5dfe-48b0-bd7c-e6188a47a379}</Project>
       <Name>AzureImageToolsTest.Storage</Name>

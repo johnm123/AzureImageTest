@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureImageToolsTest", "Azur
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureImageToolsTest.Storage", "AzureImageToolsTest.Storage\AzureImageToolsTest.Storage.csproj", "{43A80C6F-5DFE-48B0-BD7C-E6188A47A379}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureImageToolsTest.CognitiveServices", "AzureImageToolsTest.CognitiveServices\AzureImageToolsTest.CognitiveServices.csproj", "{CA8EAD09-6CE1-4F4A-8484-8BE1D6D1B0FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{43A80C6F-5DFE-48B0-BD7C-E6188A47A379}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43A80C6F-5DFE-48B0-BD7C-E6188A47A379}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43A80C6F-5DFE-48B0-BD7C-E6188A47A379}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA8EAD09-6CE1-4F4A-8484-8BE1D6D1B0FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA8EAD09-6CE1-4F4A-8484-8BE1D6D1B0FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA8EAD09-6CE1-4F4A-8484-8BE1D6D1B0FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA8EAD09-6CE1-4F4A-8484-8BE1D6D1B0FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
