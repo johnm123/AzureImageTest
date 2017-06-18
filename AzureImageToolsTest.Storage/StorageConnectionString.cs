@@ -1,4 +1,4 @@
-namespace AzureImageToolsTest.Domain
+namespace AzureImageToolsTest.Storage
 {
     public struct StorageConnectionString
     {

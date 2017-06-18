@@ -2,7 +2,7 @@
 using System.IO;
 using System.Web;
 using System.Web.Mvc;
-using AzureImageToolsTest.Domain;
+using AzureImageToolsTest.Storage;
 using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.Mvc;
 using Serilog;

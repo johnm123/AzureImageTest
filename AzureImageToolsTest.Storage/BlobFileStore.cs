@@ -5,7 +5,7 @@ using System.Linq;
 using Serilog;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Blob; 
-namespace AzureImageToolsTest.Domain
+namespace AzureImageToolsTest.Storage
 {
     public class BlobFileStore : IFileStore
     {

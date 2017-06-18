@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AzureImageToolsTest.Domain
+namespace AzureImageToolsTest.Storage
 {
     internal class BlobConfigurationException : Exception
     {

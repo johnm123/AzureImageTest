@@ -7,8 +7,8 @@
     <ProjectGuid>{43A80C6F-5DFE-48B0-BD7C-E6188A47A379}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AzureImageToolsTest.Domain</RootNamespace>
-    <AssemblyName>AzureImageToolsTest.Domain</AssemblyName>
+    <RootNamespace>AzureImageToolsTest.Storage</RootNamespace>
+    <AssemblyName>AzureImageToolsTest.Storage</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

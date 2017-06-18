@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.12
+VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureImageToolsTest", "AzureImageToolsTest\AzureImageToolsTest.csproj", "{FAC8B23A-9550-4F7A-B682-E8A47466E09B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureImageToolsTest.Domain", "AzureImageToolsTest.Domain\AzureImageToolsTest.Domain.csproj", "{43A80C6F-5DFE-48B0-BD7C-E6188A47A379}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureImageToolsTest.Storage", "AzureImageToolsTest.Storage\AzureImageToolsTest.Storage.csproj", "{43A80C6F-5DFE-48B0-BD7C-E6188A47A379}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace AzureImageToolsTest.Domain
+namespace AzureImageToolsTest.Storage
 {
     public interface IFileStore
     {

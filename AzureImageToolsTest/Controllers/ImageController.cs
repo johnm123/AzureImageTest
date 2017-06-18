@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using AzureImageToolsTest.Domain;
+using AzureImageToolsTest.Storage;
 using AzureImageToolsTest.Models;
 
 namespace AzureImageToolsTest.Controllers
